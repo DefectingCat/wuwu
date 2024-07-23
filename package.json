@@ -6,7 +6,9 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx,css,svg}\" --ignore-unknown",
+    "pretty-check": "prettier \"./**/*.{js,jsx,ts,tsx,json,md,mdx,css,svg}\" --ignore-unknown --check"
   },
   "license": "MIT",
   "devDependencies": {
