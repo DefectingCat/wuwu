@@ -2,41 +2,46 @@ CARGO = cargo
 RUSTC = rustc
 CROSS = cross
 NPM = pnpm
+TAURI_SRC = src-tauri
 
-all: build-release
+all: build
 
 deps:
 	$(NPM) i \
 		&& $(CARGO) install tauri-cli
 
-build:
-	$(CARGO) build
-
-build-release: clean
-	$(CARGO) build --release
+build: clean
+	$(CARGO) tauri build
 
 dev:
 	$(CARGO) tauri dev
 
 clean:
-	$(CARGO) clean
+	cd $(TAURI_SRC) \
+		&& $(CARGO) clean \
+		&& cd ..
 
 clean-release:
-	rm -rf ./target/release/
-	rm -rf ./target/debug/
+	cd $(TAURI_SRC) \
+		&& rm -rf ./target/release/ \
+		&& rm -rf ./target/debug/ \
+		&& cd ..
 
 check:
-	$(CARGO) check
+	cd $(TAURI_SRC) \
+		&& $(CARGO) check \
+		&& cd ..
 
 fmt:
-	$(CARGO) fmt
-
-lint:
-	$(CARGO) clippy
+	cd $(TAURI_SRC) \
+		&& $(CARGO) fmt \
+		&& cd ..
 
 fix:
-	$(CARGO) fix --allow-dirty --all-features \
-		&& $(CARGO) fmt
+	cd $(TAURI_SRC) \
+		&& $(CARGO) fix --allow-dirty --all-features \
+		&& $(CARGO) fmt \
+		&& cd ..
 
 build-linux-musl: clean-release
 	$(CROSS) build --release --target x86_64-unknown-linux-musl
