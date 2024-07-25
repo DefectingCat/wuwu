@@ -1,10 +1,11 @@
 import { Component } from 'solid-js';
 import styles from './Titlebar.module.css';
+import cn from 'classnames';
 
 const Titlebar: Component = () => {
   return (
     <>
-      <div data-tauri-drag-region class={styles.titlebar}>
+      <div data-tauri-drag-region class={cn(styles.titlebar, 'h-8')}>
         <div class={styles.titlebarButton} id="titlebar-minimize">
           <img
             src="https://api.iconify.design/mdi:window-minimize.svg"
