@@ -1,16 +1,24 @@
 .titlebar {
-  background: #329ea3;
   user-select: none;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  height: 2rem;
 }
-.titlebar-button {
+.titlebarButtonWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  cursor: pointer;
+  height: 100%;
+}
+.titlebarButtonWrapper:hover {
+  background: #dde6ed;
+}
+.titlebarButton {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
 }
-.titlebar-button:hover {
-  background: #5bbec3;
+.titlebarButton:hover {
 }
