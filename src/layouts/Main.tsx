@@ -1,4 +1,4 @@
-import Titlebar from 'components/Titlebar';
+import Titlebar from 'components/Titlebar/Titlebar';
 import { children, Component, JSX } from 'solid-js';
 
 const Main: Component<{

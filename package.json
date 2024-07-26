@@ -12,6 +12,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@iconify/json": "^2.2.230",
+    "@iconify/tailwind": "^1.1.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "solid-devtools": "^0.29.2",
