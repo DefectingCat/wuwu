@@ -1,10 +1,12 @@
 import WutheringWavesLogo from 'assets/game-icons/Wuthering_Waves_logo.png';
+import GameMenuHome from 'components/GameMenu';
 import { createSignal } from 'solid-js';
 
 const games = [
   {
     name: '鸣潮',
     icon: WutheringWavesLogo,
+    menus: [<GameMenuHome />],
   },
 ];
 
