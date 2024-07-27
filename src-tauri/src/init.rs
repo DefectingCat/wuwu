@@ -1,7 +1,15 @@
-use tauri::App;
+use anyhow::anyhow;
+use tauri::{App, Manager};
 use tracing_subscriber::{fmt, prelude::*, registry, EnvFilter};
+use window_shadows::set_shadow;
 
-pub fn setup(_app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
+pub fn setup(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
+    let window = app
+        .get_window("main")
+        .ok_or(anyhow!("cannot get main window"))?;
+    #[cfg(any(windows, target_os = "macos"))]
+    set_shadow(&window, true).unwrap();
+
     Ok(())
 }
 

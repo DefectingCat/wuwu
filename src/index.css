@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+html {
+  height: 100%;
+}
+
 #root {
-  @apply rounded-xl overflow-hidden;
+  @apply rounded-xl overflow-hidden bg-white h-full;
 }
