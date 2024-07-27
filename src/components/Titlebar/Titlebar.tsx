@@ -26,7 +26,10 @@ const Titlebar: Component = () => {
             )}
           ></span>
         </div>
-        <div id="titlebar-close" class={styles.titlebarButtonWrapper}>
+        <div
+          id="titlebar-close"
+          class={cn('hover:bg-red-400', styles.titlebarButtonWrapper)}
+        >
           <span
             class={cn(
               'icon-[mdi--close]',
