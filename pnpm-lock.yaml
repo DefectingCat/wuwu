@@ -11,6 +11,9 @@ importers:
       '@solidjs/router':
         specifier: ^0.14.1
         version: 0.14.1(solid-js@1.8.18)
+      '@tauri-apps/api':
+        specifier: ^1.6.0
+        version: 1.6.0
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -535,6 +538,10 @@ packages:
     resolution: {integrity: sha512-GumQ4jbt5xDngLypAndC4EjapY/3DP0G8Az4YWEVQHdCtjHwB8IOm32eEBxE9lKpOffbtXV0r/0X0mofHJ1m5w==}
     peerDependencies:
       solid-js: ^1.8.6
+
+  '@tauri-apps/api@1.6.0':
+    resolution: {integrity: sha512-rqI++FWClU5I2UBp4HXFvl+sBWkdigBkxnpJDQUWttNyG7IZP4FwQGhTNL5EOw0vI8i6eSAJ5frLqO7n7jbJdg==}
+    engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1651,6 +1658,8 @@ snapshots:
   '@solidjs/router@0.14.1(solid-js@1.8.18)':
     dependencies:
       solid-js: 1.8.18
+
+  '@tauri-apps/api@1.6.0': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
