@@ -28,7 +28,7 @@ const Leftbar = () => {
         </div>
       </div>
 
-      <div class="h-[2px] bg-gray-300 my-2 mx-[-10px]"></div>
+      <div class="h-[2px] bg-gray-300 my-2"></div>
 
       <div class="px-[6px] flex flex-col items-center">
         <For each={currentGame.menus}>
