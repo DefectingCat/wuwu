@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { JSX } from 'solid-js';
+import styles from 'components/GameMenu/index.module.css';
 
 /**
  * Game menu home
@@ -15,11 +16,11 @@ const GameMenuHome = ({
     <div
       class={cn(
         'flex justify-center rounded-lg',
-        'items-center hover:bg-gray-400',
+        'items-center',
         'w-full py-2 cursor-pointer',
-        'hover:bg-opacity-50',
-        actived && 'bg-gray-400 bg-opacity-50',
+        actived && styles.btnActive,
         'transition-all',
+        styles.btn,
       )}
       onclick={onclick}
     >

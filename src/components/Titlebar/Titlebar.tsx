@@ -3,7 +3,7 @@ import { Component, createSignal, onCleanup, onMount, Show } from 'solid-js';
 import styles from './Titlebar.module.css';
 import { appWindow } from '@tauri-apps/api/window';
 
-const titlebarButton = 'cursor-pointer w-5 h-5';
+const titlebarButton = 'cursor-pointer w-5 h-5 text-white';
 
 const Titlebar: Component = () => {
   const [isMaximized, setIsMaximized] = createSignal(false);
@@ -33,7 +33,7 @@ const Titlebar: Component = () => {
             )}
           ></span>
         </div>
-        <Show when={!isMaximized()}>
+        {/* <Show when={!isMaximized()}>
           <div
             id="titlebar-maximize"
             class={styles.titlebarButtonWrapper}
@@ -66,10 +66,10 @@ const Titlebar: Component = () => {
               )}
             ></span>
           </div>
-        </Show>
+        </Show> */}
         <div
           id="titlebar-close"
-          class={cn('hover:bg-red-400', styles.titlebarButtonWrapper)}
+          class={cn('hover:bg-red-600', styles.titlebarButtonWrapper)}
           onclick={() => {
             appWindow.close();
           }}

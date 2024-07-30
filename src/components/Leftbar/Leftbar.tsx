@@ -20,7 +20,7 @@ const Leftbar = () => {
 
   return (
     <div
-      class={cn('flex flex-col w-16 py-[10px]', 'bg-gray-400 bg-opacity-50')}
+      class={cn('flex flex-col w-16 py-[10px]', 'bg-wuwu-bg backdrop-blur-md')}
     >
       <div>
         <div class="cursor-pointer flex justify-center">
@@ -28,7 +28,7 @@ const Leftbar = () => {
         </div>
       </div>
 
-      <div class="h-[2px] bg-gray-300 my-2"></div>
+      <div class="h-[1px] bg-gray-300 my-2 bg-opacity-30 opacity-30"></div>
 
       <div class="px-[6px] flex flex-col items-center">
         <For each={currentGame.menus}>

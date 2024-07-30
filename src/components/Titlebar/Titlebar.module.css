@@ -14,7 +14,7 @@
   height: 100%;
 }
 .titlebarButtonWrapper:hover {
-  background: #dde6ed;
+  background: rgb(111 111 111 / 50%);
 }
 .titlebarButton {
   display: inline-flex;

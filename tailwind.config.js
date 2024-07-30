@@ -15,6 +15,8 @@ module.exports = {
         200: '#9DB2BF',
         300: '#526D82',
         400: '#27374D',
+        // global backgroud with backdrop 10px
+        bg: 'rgb(37 37 37 / 59%)',
       },
       ...colors,
     },

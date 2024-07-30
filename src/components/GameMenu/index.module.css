@@ -1,0 +1,10 @@
+.btn {
+  background: rgb(73 73 73 / 34%);
+  backdrop-filter: blur(10px);
+}
+.btn:hover {
+  background: rgb(73 73 73 / 44%);
+}
+.btnActive {
+  background: rgb(73 73 73 / 44%);
+}

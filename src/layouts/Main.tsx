@@ -1,6 +1,8 @@
 import Leftbar from 'components/Leftbar/Leftbar';
 import Titlebar from 'components/Titlebar/Titlebar';
 import { Component, JSX } from 'solid-js';
+import styles from 'layouts/Main.module.css';
+import cn from 'classnames';
 
 const Main: Component<{
   children?: JSX.Element;
@@ -9,7 +11,7 @@ const Main: Component<{
 
   return (
     <>
-      <div class="flex h-full">
+      <div class={cn('flex h-full', styles.wrapper)}>
         {/* left bar */}
         <Leftbar />
         {/* right body */}
