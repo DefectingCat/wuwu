@@ -17,7 +17,7 @@ const GameSelector = () => {
   return (
     <div>
       <div class="cursor-pointer">
-        <img class="rounded-lg" src={currentGame.icon} />
+        <img class="rounded-lg" src={currentGame.icon}  alt='game icon'/>
       </div>
     </div>
   );
